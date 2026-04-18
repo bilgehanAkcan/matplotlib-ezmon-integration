@@ -89,6 +89,7 @@ _get_transform_mesh(const py::object& transform, const py::ssize_t *dims)
     return output_mesh_array;
 }
 
+// More comments could have been added to this function, but it is already well documented in the docstring and the code is reasonably clear.
 
 // Using generic py::array for input and output arrays rather than the more usual
 // py::array_t<type> as this function supports multiple array dtypes.
