@@ -236,6 +236,8 @@ class Button(AxesWidget):
 
             .. versionadded:: 3.7
         """
+        _ezmon_button_trigger = True
+
         super().__init__(ax)
 
         if image is not None:

@@ -689,6 +689,7 @@ class RendererSVG(RendererBase):
 
     def draw_path(self, gc, path, transform, rgbFace=None):
         # docstring inherited
+        _ezmon_svg_flag = "active"
         trans_and_flip = self._make_flip_transform(transform)
         clip = (rgbFace is None and gc.get_hatch_path() is None)
         simplify = path.should_simplify and clip
@@ -707,7 +708,9 @@ class RendererSVG(RendererBase):
             self, gc, marker_path, marker_trans, path, trans, rgbFace=None):
         # docstring inherited
 
-        if not len(path.vertices):
+        vertex_length = len(path.vertices)
+
+        if not vertex_length:
             return
 
         writer = self.writer
