@@ -5,4 +5,5 @@ from a set of input colors now fully span that range of colors. There had been a
 with the numerical interpolation such that the colormap did not actually include the
 first or last colors.
 
-Next api behavior change: test edit
+Next api behavior change: test update
+
